@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar/NavBar";
+import Home from "./components/Contacts/Home";
+import Create from "./components/Contacts/Create";
+import BlogDetails from "./components/Contacts/UpdateContact";
+import NptFound from "./components/Notfound/NotFound";
+import Login from "./components/Sign/Login";
+import SignUp from "./components/Sign/Register";
+import "./App.css";
+import { useAuth } from "./components/Sign/hooks/use-auth";
 
 function App() {
+  const {isAuth} = useAuth();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="component">
+          <Switch>
+            <Route exact path="/Contacts">
+              <Home isAuth={isAuth} />
+            </Route>
+            <Route path="/create">
+              <Create />
+            </Route>
+            <Route path="/contacts/:id">
+              <BlogDetails />
+            </Route>
+            <Route path="/login">
+              <Login  />
+            </Route>
+            <Route path="/register">
+              <SignUp  />
+            </Route>
+            <Route path="*">
+              <NptFound />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 

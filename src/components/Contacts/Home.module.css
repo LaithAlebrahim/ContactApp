@@ -1,0 +1,76 @@
+.home__title {
+
+    font-size:  70px;
+    font-weight: bold;
+    
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.blog__preview {
+    border: 2px solid white;
+    border-radius: 18px;
+    transition: .2s linear;
+    display: flex;
+    margin: 0px 50px 40px 50px;
+    background-color: white;
+}
+
+.left__part {
+    width: 90%;
+}
+
+.right__part {
+    width: 10%;
+    margin: auto 0;
+}
+
+.post__button {
+    padding: 10px 20px;
+    border: 2px solid rgb(11, 21, 95);
+    border-radius: 6px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(11, 21, 95);
+    cursor: pointer;
+    transition: .3s linear;
+    font-weight: 500;
+    margin-right:10px;
+    margin-bottom: 10px;
+}
+
+
+
+.post__button:hover {
+    color: rgb(11, 21, 95);
+    background-color: rgb(213, 154, 255);
+    border-color: rgb(213, 154, 255);
+}
+
+.blog__preview h2 {
+    padding: 0px 100px 0px 100px;
+}
+
+.blog__preview a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.blog__preview:hover {
+    transform: translateY(-5px);
+} 
+
+.post__title {
+    color: rgb(11, 21, 95);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.post__author {
+    color: rgb(48, 17, 71);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    border: none;
+}

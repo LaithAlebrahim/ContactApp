@@ -1,0 +1,22 @@
+.not__found {
+    margin-left: 20px;
+}
+
+.back__title {
+    font-size: 35px;
+}
+
+.back__label {
+    font-size: 25px;
+}
+
+.link__back {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+
+.link__back:hover {
+    text-decoration: underline;
+}
